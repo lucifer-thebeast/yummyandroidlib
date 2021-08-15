@@ -1,33 +1,16 @@
-import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import java.io.FileInputStream
-import java.util.*
 
 plugins {
   kotlin("multiplatform")
   id("com.android.library")
   id("kotlin-android-extensions")
   kotlin("plugin.serialization")
-  id("com.codingfeline.buildkonfig")
   id("com.chromaticnoise.multiplatform-swiftpackage") version "2.0.3"
   id("maven")
 }
 
 group = "me.about.ronillo.recipeapp"
 version = "1.0-SNAPSHOT"
-
-var file = project.parent?.file("rapid_api.properties") ?: throw Exception("rapid_api.properties not found")
-val properties = Properties()
-properties.load(FileInputStream(file))
-
-buildkonfig {
-    packageName = "me.about.ronillo.recipeapp"
-
-    defaultConfigs {
-        val apiKey = properties["rapid_api_key"] as String
-        buildConfigField(STRING, "rapidApiKey", apiKey)
-    }
-}
 
 multiplatformSwiftPackage {
     packageName("YummySwiftPackage")

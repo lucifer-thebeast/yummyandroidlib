@@ -4,11 +4,17 @@ import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
-import me.about.ronillo.recipeapp.BuildKonfig
 
 class Api {
 
-    private val rapidApiKey: String = BuildKonfig.rapidApiKey
+    private var rapidApiKey: String = ""
+
+    constructor() {
+    }
+
+    constructor(rapidApiKey: String) {
+      this.rapidApiKey = rapidApiKey
+    }
 
     val httpClient = HttpClient {
 
