@@ -6,7 +6,7 @@ plugins {
   id("kotlin-android-extensions")
   kotlin("plugin.serialization")
   id("com.chromaticnoise.multiplatform-swiftpackage") version "2.0.3"
-  id("maven")
+  id("maven-publish")
 }
 
 group = "me.about.ronillo.recipeapp"
@@ -66,6 +66,33 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
+        }
+    }
+}
+
+
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+afterEvaluate {
+    publishing {
+        publications {
+          create<MavenPublication>("maven") {
+              groupId = "me.about.ronillo.yummly"
+              artifactId = "multiyummylib"
+              version = "1.0-SNAPSHOT"
+
+              from(components["release"])
+          }
+            // Creates a Maven publication called "release".
+            /* release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = "me.about.ronillo.recipeapp"
+                artifactId = "rc"
+                version = "1.0-SNAPSHOT"
+            } */
         }
     }
 }
