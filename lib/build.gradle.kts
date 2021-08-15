@@ -10,6 +10,7 @@ plugins {
   kotlin("plugin.serialization")
   id("com.codingfeline.buildkonfig")
   id("com.chromaticnoise.multiplatform-swiftpackage") version "2.0.3"
+  id("maven")
 }
 
 group = "me.about.ronillo.recipeapp"
