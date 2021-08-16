@@ -5,28 +5,16 @@ import io.ktor.client.features.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 
-class Api {
+class Api(private var rapidApiKey: String) {
 
-    private var rapidApiKey: String = ""
-
-    constructor() {
-    }
-
-    constructor(rapidApiKey: String) {
-      this.rapidApiKey = rapidApiKey
-    }
-
-    val httpClient = HttpClient {
+    private val httpClient = HttpClient {
 
         install(HttpTimeout)
     }
 
     @Throws(Exception::class)
-    suspend fun getRecipes(pageStart: Int): String {
-        val response = httpClient.get<HttpResponse>(
-            "https://yummly2.p.rapidapi.com/feeds/list?start=page_start&limit=18&tag=list.recipe.popular"
-                .replace("page_start", pageStart.toString())
-        ) {
+    suspend fun get(url: String): String {
+        val response = httpClient.get<HttpResponse>(url) {
             headers {
                 append("x-rapidapi-key", rapidApiKey)
                 append("x-rapidapi-host", "yummly2.p.rapidapi.com")
