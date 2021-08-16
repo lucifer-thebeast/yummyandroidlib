@@ -5,6 +5,7 @@ Then enter this git repository url and select this swiftpackage branch in the ru
 
 ### Example Usage
 
+```
 //
 //  RecipeListViewModel.swift
 //  Yummy
@@ -32,4 +33,4 @@ class RecipeListViewModel : ObservableObject {
         })
     }
 }
-
+```
