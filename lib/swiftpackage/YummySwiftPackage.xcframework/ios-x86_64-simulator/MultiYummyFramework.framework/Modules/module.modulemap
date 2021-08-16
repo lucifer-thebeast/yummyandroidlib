@@ -1,6 +1,0 @@
-framework module MultiYummyFramework {
-    umbrella header "MultiYummyFramework.h"
-
-    export *
-    module * { export * }
-}
