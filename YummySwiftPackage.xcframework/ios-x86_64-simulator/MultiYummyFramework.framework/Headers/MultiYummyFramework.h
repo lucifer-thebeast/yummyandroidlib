@@ -160,7 +160,7 @@ __attribute__((swift_name("Api")))
  @note This method converts instances of Exception to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getUrl:(NSString *)url completionHandler:(void (^)(NSString * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("get(url:completionHandler:)")));
+- (void)getUrl:(NSString *)url timeout:(int64_t)timeout completionHandler:(void (^)(NSString * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("get(url:timeout:completionHandler:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1979,6 +1979,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GetRecipeListCommand")))
 @interface MYFGetRecipeListCommand : MYFBase
 - (instancetype)initWithApi:(MYFApi *)api __attribute__((swift_name("init(api:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithApi:(MYFApi *)api timeout:(int64_t)timeout __attribute__((swift_name("init(api:timeout:)"))) __attribute__((objc_designated_initializer));
 
 /**
  @note This method converts instances of Exception to errors.
