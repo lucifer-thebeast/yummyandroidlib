@@ -13,14 +13,14 @@ class Api(private var rapidApiKey: String) {
     }
 
     @Throws(Exception::class)
-    suspend fun get(url: String): String {
+    suspend fun get(url: String, timeout: Long = 5000): String {
         val response = httpClient.get<HttpResponse>(url) {
             headers {
                 append("x-rapidapi-key", rapidApiKey)
                 append("x-rapidapi-host", "yummly2.p.rapidapi.com")
             }
             timeout {
-                requestTimeoutMillis = 5000
+                requestTimeoutMillis = timeout
             }
         }
         return response.readText()
