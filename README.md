@@ -1,6 +1,4 @@
 # yummyandroidlib
 
-Source code of  https://github.com/lucifer-thebeast/yummymultiplatformpackage.
-This is a Kotlin Multiplatform library which can be shared to Android iOS apps that wants to query recipes from Yummly.
-
-Will add more use case soon. See GetRecipeListCommand class. Its the only use case for now.
+In your Xcode project, select File > Swift Packages > Add Package Dependencies
+Then enter this git repository url and select this swiftpackage branch in the rules page of swift package manager.
