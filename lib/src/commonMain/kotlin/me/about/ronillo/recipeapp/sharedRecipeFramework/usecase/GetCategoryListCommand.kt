@@ -2,10 +2,10 @@ package me.about.ronillo.recipeapp.sharedRecipeFramework.usecase
 
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import me.about.ronillo.recipeapp.sharedRecipeFramework.entity.Recipes
+import me.about.ronillo.recipeapp.sharedRecipeFramework.entity.CategoryList
 import me.about.ronillo.recipeapp.sharedRecipeFramework.network.Api
 
-class GetRecipeListCommand : Command {
+class GetCategoryListCommand : Command {
 
     private var api: Api
     private var timeout: Long
@@ -17,11 +17,10 @@ class GetRecipeListCommand : Command {
         this.timeout = timeout
     }
 
-    /** Retrieves a list of recipes given a category tag */
+    /** Retrieves a list of categories */
     @Throws(Exception::class)
-    suspend fun getRecipes(pageStart: Int, tag: String = "list.recipe.popular"): Recipes {
-        val url = "https://yummly2.p.rapidapi.com/feeds/list?start=page_start&limit=18&tag=$tag"
-            .replace("page_start", pageStart.toString())
+    suspend fun getCategories(): CategoryList {
+        val url = "https://yummly2.p.rapidapi.com/categories/list"
         val jsonString = api.get(url, timeout)
         val json = Json {
             ignoreUnknownKeys = true
