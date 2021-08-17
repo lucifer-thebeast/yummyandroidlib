@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MYFStepGroup, MYFAction, MYFAdtag, MYFImperial, MYFMetric, MYFAmount, MYFImperialX, MYFMetricX, MYFAmountX, MYFAndroid, MYFAttribution, MYFDescription, MYFDetails, MYFIngredientLineX, MYFNutrition, MYFVideos, MYFContent, MYFCourse, MYFCuisine, MYFImage, MYFDifficulty, MYFDish, MYFDisplay, MYFDisplayX, MYFEquipment, MYFFeed, MYFFirebase, MYFFirebaseX, MYFSnapshot, MYFFloatroVideo, MYFGuidedVariation, MYFUnit, MYFUnitXX, MYFIngredientLine, MYFIo, MYFLinkTag, MYFMetaTags, MYFUnitX, MYFUnitXXX, MYFQueryParams, MYFMoreContent, MYFNutritionEstimate, MYFUnitXXXX, MYFNutritionX, MYFPrerequisiteEvent, MYFProfile, MYFQueryParamsX, MYFQueryParamsXX, MYFRecipes, MYFRelatedContent, MYFRelatedProducts, MYFRelatedRecipeSearchTerm, MYFReviews, MYFSpotlightSearch, MYFWeb, MYFSeo, MYFSpotlightSearchX, MYFWebX, MYFSeoX, MYFSource, MYFTimer, MYFVideo, MYFStep, MYFTechnique, MYFTags, MYFTagsAds, MYFVideoUrls, MYFVideoDetails, MYFVideoUrlsX, MYFYums, MYFApi, MYFKotlinThrowable, MYFKotlinArray<T>, MYFKotlinx_serialization_coreSerializersModule, MYFKotlinx_serialization_coreSerialKind, MYFKotlinNothing;
+@class MYFStepGroup, MYFAction, MYFAdtag, MYFImperial, MYFMetric, MYFAmount, MYFImperialX, MYFMetricX, MYFAmountX, MYFAndroid, MYFAttribution, MYFBrowseCategoryDisplay, MYFCategoryContent, MYFBrowseCategory, MYFCategoryTopic, MYFShoppingCategory, MYFCategoryList, MYFCategoryTopicDisplay, MYFDescription, MYFDetails, MYFIngredientLineX, MYFNutrition, MYFVideos, MYFContent, MYFCourse, MYFCuisine, MYFImage, MYFDifficulty, MYFDish, MYFDisplay, MYFDisplayX, MYFEquipment, MYFFeed, MYFFirebase, MYFFirebaseX, MYFSnapshot, MYFFloatroVideo, MYFGuidedVariation, MYFUnit, MYFUnitXX, MYFIngredientLine, MYFIo, MYFLinkTag, MYFMetaTags, MYFUnitX, MYFUnitXXX, MYFQueryParams, MYFMoreContent, MYFNutritionEstimate, MYFUnitXXXX, MYFNutritionX, MYFPrerequisiteEvent, MYFProfile, MYFQueryParamsX, MYFQueryParamsXX, MYFRecipes, MYFRelatedContent, MYFRelatedProducts, MYFRelatedRecipeSearchTerm, MYFReviews, MYFSpotlightSearch, MYFWeb, MYFSeo, MYFSpotlightSearchX, MYFWebX, MYFSeoX, MYFShoppingCategoryDisplay, MYFSource, MYFTimer, MYFVideo, MYFStep, MYFTechnique, MYFTags, MYFTagsAds, MYFVideoUrls, MYFVideoDetails, MYFVideoUrlsX, MYFYums, MYFApi, MYFKotlinThrowable, MYFKotlinArray<T>, MYFKotlinx_serialization_coreSerializersModule, MYFKotlinx_serialization_coreSerialKind, MYFKotlinNothing;
 
-@protocol MYFParcelable, MYFKotlinx_serialization_coreKSerializer, MYFKotlinx_serialization_coreEncoder, MYFKotlinx_serialization_coreSerialDescriptor, MYFKotlinx_serialization_coreSerializationStrategy, MYFKotlinx_serialization_coreDecoder, MYFKotlinx_serialization_coreDeserializationStrategy, MYFKotlinIterator, MYFKotlinx_serialization_coreCompositeEncoder, MYFKotlinAnnotation, MYFKotlinx_serialization_coreCompositeDecoder, MYFKotlinx_serialization_coreSerializersModuleCollector, MYFKotlinKClass, MYFKotlinKDeclarationContainer, MYFKotlinKAnnotatedElement, MYFKotlinKClassifier;
+@protocol MYFParcelable, MYFKotlinx_serialization_coreKSerializer, MYFCommand, MYFKotlinx_serialization_coreEncoder, MYFKotlinx_serialization_coreSerialDescriptor, MYFKotlinx_serialization_coreSerializationStrategy, MYFKotlinx_serialization_coreDecoder, MYFKotlinx_serialization_coreDeserializationStrategy, MYFKotlinIterator, MYFKotlinx_serialization_coreCompositeEncoder, MYFKotlinAnnotation, MYFKotlinx_serialization_coreCompositeDecoder, MYFKotlinx_serialization_coreSerializersModuleCollector, MYFKotlinKClass, MYFKotlinKDeclarationContainer, MYFKotlinKAnnotatedElement, MYFKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -301,6 +301,161 @@ __attribute__((swift_name("Attribution")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Attribution.Companion")))
 @interface MYFAttributionCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BrowseCategory")))
+@interface MYFBrowseCategory : MYFBase <MYFParcelable>
+- (instancetype)initWithPromoted:(MYFBoolean * _Nullable)promoted trackingID:(NSString * _Nullable)trackingID display:(MYFBrowseCategoryDisplay * _Nullable)display content:(MYFCategoryContent * _Nullable)content type:(NSString * _Nullable)type __attribute__((swift_name("init(promoted:trackingID:display:content:type:)"))) __attribute__((objc_designated_initializer));
+- (MYFBoolean * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (MYFBrowseCategoryDisplay * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (MYFCategoryContent * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (MYFBrowseCategory *)doCopyPromoted:(MYFBoolean * _Nullable)promoted trackingID:(NSString * _Nullable)trackingID display:(MYFBrowseCategoryDisplay * _Nullable)display content:(MYFCategoryContent * _Nullable)content type:(NSString * _Nullable)type __attribute__((swift_name("doCopy(promoted:trackingID:display:content:type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) MYFCategoryContent * _Nullable content __attribute__((swift_name("content")));
+@property (readonly) MYFBrowseCategoryDisplay * _Nullable display __attribute__((swift_name("display")));
+@property (readonly) MYFBoolean * _Nullable promoted __attribute__((swift_name("promoted")));
+@property (readonly) NSString * _Nullable trackingID __attribute__((swift_name("trackingID")));
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BrowseCategory.Companion")))
+@interface MYFBrowseCategoryCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BrowseCategoryDisplay")))
+@interface MYFBrowseCategoryDisplay : MYFBase <MYFParcelable>
+- (instancetype)initWithDisplayName:(NSString * _Nullable)displayName iconImage:(NSString * _Nullable)iconImage categoryImage:(NSString * _Nullable)categoryImage tag:(NSString * _Nullable)tag backgroundImage:(NSString * _Nullable)backgroundImage categoryTopics:(NSArray<MYFCategoryTopic *> * _Nullable)categoryTopics __attribute__((swift_name("init(displayName:iconImage:categoryImage:tag:backgroundImage:categoryTopics:)"))) __attribute__((objc_designated_initializer));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NSArray<MYFCategoryTopic *> * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (MYFBrowseCategoryDisplay *)doCopyDisplayName:(NSString * _Nullable)displayName iconImage:(NSString * _Nullable)iconImage categoryImage:(NSString * _Nullable)categoryImage tag:(NSString * _Nullable)tag backgroundImage:(NSString * _Nullable)backgroundImage categoryTopics:(NSArray<MYFCategoryTopic *> * _Nullable)categoryTopics __attribute__((swift_name("doCopy(displayName:iconImage:categoryImage:tag:backgroundImage:categoryTopics:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable backgroundImage __attribute__((swift_name("backgroundImage")));
+@property (readonly) NSString * _Nullable categoryImage __attribute__((swift_name("categoryImage")));
+@property (readonly) NSArray<MYFCategoryTopic *> * _Nullable categoryTopics __attribute__((swift_name("categoryTopics")));
+@property (readonly) NSString * _Nullable displayName __attribute__((swift_name("displayName")));
+@property (readonly) NSString * _Nullable iconImage __attribute__((swift_name("iconImage")));
+@property (readonly) NSString * _Nullable tag __attribute__((swift_name("tag")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BrowseCategoryDisplay.Companion")))
+@interface MYFBrowseCategoryDisplayCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryContent")))
+@interface MYFCategoryContent : MYFBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryContent.Companion")))
+@interface MYFCategoryContentCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryList")))
+@interface MYFCategoryList : MYFBase <MYFParcelable>
+- (instancetype)initWithBrowseCategories:(NSArray<MYFBrowseCategory *> * _Nullable)browseCategories shoppingCategories:(NSArray<MYFShoppingCategory *> * _Nullable)shoppingCategories __attribute__((swift_name("init(browseCategories:shoppingCategories:)"))) __attribute__((objc_designated_initializer));
+- (NSArray<MYFBrowseCategory *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSArray<MYFShoppingCategory *> * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (MYFCategoryList *)doCopyBrowseCategories:(NSArray<MYFBrowseCategory *> * _Nullable)browseCategories shoppingCategories:(NSArray<MYFShoppingCategory *> * _Nullable)shoppingCategories __attribute__((swift_name("doCopy(browseCategories:shoppingCategories:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<MYFBrowseCategory *> * _Nullable browseCategories __attribute__((swift_name("browseCategories")));
+@property (readonly) NSArray<MYFShoppingCategory *> * _Nullable shoppingCategories __attribute__((swift_name("shoppingCategories")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryList.Companion")))
+@interface MYFCategoryListCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryTopic")))
+@interface MYFCategoryTopic : MYFBase <MYFParcelable>
+- (instancetype)initWithPromoted:(MYFBoolean * _Nullable)promoted trackingID:(NSString * _Nullable)trackingID display:(MYFCategoryTopicDisplay * _Nullable)display content:(MYFCategoryContent * _Nullable)content type:(NSString * _Nullable)type __attribute__((swift_name("init(promoted:trackingID:display:content:type:)"))) __attribute__((objc_designated_initializer));
+- (MYFBoolean * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (MYFCategoryTopicDisplay * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (MYFCategoryContent * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (MYFCategoryTopic *)doCopyPromoted:(MYFBoolean * _Nullable)promoted trackingID:(NSString * _Nullable)trackingID display:(MYFCategoryTopicDisplay * _Nullable)display content:(MYFCategoryContent * _Nullable)content type:(NSString * _Nullable)type __attribute__((swift_name("doCopy(promoted:trackingID:display:content:type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) MYFCategoryContent * _Nullable content __attribute__((swift_name("content")));
+@property (readonly) MYFCategoryTopicDisplay * _Nullable display __attribute__((swift_name("display")));
+@property (readonly) MYFBoolean * _Nullable promoted __attribute__((swift_name("promoted")));
+@property (readonly) NSString * _Nullable trackingID __attribute__((swift_name("trackingID")));
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryTopic.Companion")))
+@interface MYFCategoryTopicCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryTopicDisplay")))
+@interface MYFCategoryTopicDisplay : MYFBase <MYFParcelable>
+- (instancetype)initWithDisplayName:(NSString * _Nullable)displayName iconImage:(NSString * _Nullable)iconImage tag:(NSString * _Nullable)tag backgroundImage:(NSString * _Nullable)backgroundImage __attribute__((swift_name("init(displayName:iconImage:tag:backgroundImage:)"))) __attribute__((objc_designated_initializer));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (MYFCategoryTopicDisplay *)doCopyDisplayName:(NSString * _Nullable)displayName iconImage:(NSString * _Nullable)iconImage tag:(NSString * _Nullable)tag backgroundImage:(NSString * _Nullable)backgroundImage __attribute__((swift_name("doCopy(displayName:iconImage:tag:backgroundImage:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable backgroundImage __attribute__((swift_name("backgroundImage")));
+@property (readonly) NSString * _Nullable displayName __attribute__((swift_name("displayName")));
+@property (readonly) NSString * _Nullable iconImage __attribute__((swift_name("iconImage")));
+@property (readonly) NSString * _Nullable tag __attribute__((swift_name("tag")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CategoryTopicDisplay.Companion")))
+@interface MYFCategoryTopicDisplayCompanion : MYFBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
@@ -1345,6 +1500,60 @@ __attribute__((swift_name("SeoX.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ShoppingCategory")))
+@interface MYFShoppingCategory : MYFBase <MYFParcelable>
+- (instancetype)initWithPromoted:(MYFBoolean * _Nullable)promoted trackingID:(NSString * _Nullable)trackingID display:(MYFShoppingCategoryDisplay * _Nullable)display content:(MYFCategoryContent * _Nullable)content type:(NSString * _Nullable)type __attribute__((swift_name("init(promoted:trackingID:display:content:type:)"))) __attribute__((objc_designated_initializer));
+- (MYFBoolean * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (MYFShoppingCategoryDisplay * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (MYFCategoryContent * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (MYFShoppingCategory *)doCopyPromoted:(MYFBoolean * _Nullable)promoted trackingID:(NSString * _Nullable)trackingID display:(MYFShoppingCategoryDisplay * _Nullable)display content:(MYFCategoryContent * _Nullable)content type:(NSString * _Nullable)type __attribute__((swift_name("doCopy(promoted:trackingID:display:content:type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) MYFCategoryContent * _Nullable content __attribute__((swift_name("content")));
+@property (readonly) MYFShoppingCategoryDisplay * _Nullable display __attribute__((swift_name("display")));
+@property (readonly) MYFBoolean * _Nullable promoted __attribute__((swift_name("promoted")));
+@property (readonly) NSString * _Nullable trackingID __attribute__((swift_name("trackingID")));
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ShoppingCategory.Companion")))
+@interface MYFShoppingCategoryCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ShoppingCategoryDisplay")))
+@interface MYFShoppingCategoryDisplay : MYFBase <MYFParcelable>
+- (instancetype)initWithDisplayName:(NSString * _Nullable)displayName categoryImage:(NSString * _Nullable)categoryImage tag:(NSString * _Nullable)tag __attribute__((swift_name("init(displayName:categoryImage:tag:)"))) __attribute__((objc_designated_initializer));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (MYFShoppingCategoryDisplay *)doCopyDisplayName:(NSString * _Nullable)displayName categoryImage:(NSString * _Nullable)categoryImage tag:(NSString * _Nullable)tag __attribute__((swift_name("doCopy(displayName:categoryImage:tag:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable categoryImage __attribute__((swift_name("categoryImage")));
+@property (readonly) NSString * _Nullable displayName __attribute__((swift_name("displayName")));
+@property (readonly) NSString * _Nullable tag __attribute__((swift_name("tag")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ShoppingCategoryDisplay.Companion")))
+@interface MYFShoppingCategoryDisplayCompanion : MYFBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Snapshot")))
 @interface MYFSnapshot : MYFBase <MYFParcelable>
 - (instancetype)initWithOriginal:(NSString * _Nullable)original __attribute__((swift_name("init(original:)"))) __attribute__((objc_designated_initializer));
@@ -1975,9 +2184,14 @@ __attribute__((swift_name("Yums.Companion")))
 - (id<MYFKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
+__attribute__((swift_name("Command")))
+@protocol MYFCommand
+@required
+@end;
+
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("GetRecipeListCommand")))
-@interface MYFGetRecipeListCommand : MYFBase
+__attribute__((swift_name("GetCategoryListCommand")))
+@interface MYFGetCategoryListCommand : MYFBase <MYFCommand>
 - (instancetype)initWithApi:(MYFApi *)api __attribute__((swift_name("init(api:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithApi:(MYFApi *)api timeout:(int64_t)timeout __attribute__((swift_name("init(api:timeout:)"))) __attribute__((objc_designated_initializer));
 
@@ -1985,7 +2199,20 @@ __attribute__((swift_name("GetRecipeListCommand")))
  @note This method converts instances of Exception to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getRecipesPageStart:(int32_t)pageStart completionHandler:(void (^)(MYFRecipes * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getRecipes(pageStart:completionHandler:)")));
+- (void)getCategoriesWithCompletionHandler:(void (^)(MYFCategoryList * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getCategories(completionHandler:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetRecipeListCommand")))
+@interface MYFGetRecipeListCommand : MYFBase <MYFCommand>
+- (instancetype)initWithApi:(MYFApi *)api __attribute__((swift_name("init(api:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithApi:(MYFApi *)api timeout:(int64_t)timeout __attribute__((swift_name("init(api:timeout:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ @note This method converts instances of Exception to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)getRecipesPageStart:(int32_t)pageStart tag:(NSString *)tag completionHandler:(void (^)(MYFRecipes * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getRecipes(pageStart:tag:completionHandler:)")));
 @end;
 
 __attribute__((swift_name("KotlinThrowable")))
